@@ -7,52 +7,53 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <header class="topbar">
+    <strong>CASTILLO</strong>
+    <nav>
+      <a href="#black">Kính đen</a>
+      <a href="#white">Kính trắng</a>
+      <a href="#gray">Kính xám</a>
+      <a href="#gold">Kính vàng</a>
+    </nav>
+    <a class="quote-link" href="tel:0938245247">Báo giá</a>
+  </header>
+
   <main class="page">
-    <aside class="left-palette" aria-label="Chọn màu">
-      <button class="color-chip active" data-index="0"><span class="dot black"></span><small>Đen</small></button>
-      <button class="color-chip" data-index="1"><span class="dot white"></span><small>Trắng</small></button>
-      <button class="color-chip" data-index="2"><span class="dot gray"></span><small>Xám</small></button>
-      <button class="color-chip" data-index="3"><span class="dot gold"></span><small>Vàng</small></button>
-    </aside>
-
-    <section class="screen">
-      <div class="track" id="track">
-        <article class="panel tone-black">
-          <header class="topbar">
-            <strong>CASTILLO</strong>
-            <nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav>
-            <a href="tel:0938245247">Báo giá</a>
-          </header>
-          <div class="title"><h1>Castillo Glass</h1><h2>Đen bóng. Tối giản. Sắc nét.</h2><div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div></div>
-          <div class="product-stage"><span class="cast-shadow"></span><span class="floor-shadow"></span><img class="product-img" src="./assets/118G-B1.png" alt="118G-B1 Castillo"></div>
-        </article>
-
-        <article class="panel tone-white">
-          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Báo giá</a></header>
-          <div class="title"><h1>Castillo Glass</h1><h2>Trắng tinh khiết. Thanh lịch.</h2><div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div></div>
-          <div class="product-stage"><span class="cast-shadow"></span><span class="floor-shadow"></span><img class="product-img" src="./glass-white.png" alt="Kính cường lực trắng Castillo"></div>
-        </article>
-
-        <article class="panel tone-gray">
-          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Báo giá</a></header>
-          <div class="title"><h1>Castillo Glass</h1><h2>Xám hiện đại. Cân bằng.</h2><div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div></div>
-          <div class="product-stage"><span class="cast-shadow"></span><span class="floor-shadow"></span><img class="product-img" src="./glass-gray.png" alt="Kính cường lực xám Castillo"></div>
-        </article>
-
-        <article class="panel tone-gold">
-          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Báo giá</a></header>
-          <div class="title"><h1>Castillo Glass</h1><h2>Vàng sang trọng. Ấm áp.</h2><div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div></div>
-          <div class="product-stage"><span class="cast-shadow"></span><span class="floor-shadow"></span><img class="product-img" src="./glass-gold.png" alt="Kính cường lực vàng Castillo"></div>
-        </article>
+    <section id="black" class="hero-section tone-black">
+      <div class="hero-copy">
+        <h1>Castillo Glass</h1>
+        <p>Đen bóng. Tối giản. Sắc nét.</p>
+        <div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
       </div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./assets/118G-B1.png" alt="118G-B1 Castillo"></div>
+    </section>
+
+    <section id="white" class="hero-section tone-white">
+      <div class="hero-copy">
+        <h1>Kính trắng</h1>
+        <p>Thanh lịch. Sáng sạch. Dễ phối nội thất.</p>
+        <div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
+      </div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-white.png" alt="Kính cường lực trắng Castillo"></div>
+    </section>
+
+    <section id="gray" class="hero-section tone-gray">
+      <div class="hero-copy">
+        <h1>Kính xám</h1>
+        <p>Hiện đại. Cân bằng. Tinh gọn.</p>
+        <div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
+      </div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-gray.png" alt="Kính cường lực xám Castillo"></div>
+    </section>
+
+    <section id="gold" class="hero-section tone-gold">
+      <div class="hero-copy">
+        <h1>Kính vàng</h1>
+        <p>Sang trọng. Ấm áp. Nổi bật.</p>
+        <div class="hero-actions"><a class="primary" href="tel:0938245247">Nhận báo giá</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
+      </div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-gold.png" alt="Kính cường lực vàng Castillo"></div>
     </section>
   </main>
-
-  <script>
-    const track=document.getElementById('track');
-    const controls=document.querySelectorAll('[data-index]');
-    function go(i){track.style.transform=`translateX(-${i*100}vw)`;controls.forEach(b=>b.classList.toggle('active',Number(b.dataset.index)===i));}
-    controls.forEach(b=>b.onclick=()=>go(Number(b.dataset.index)));
-  </script>
 </body>
 </html>
