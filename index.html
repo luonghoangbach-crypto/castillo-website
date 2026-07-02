@@ -4,75 +4,58 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Castillo - Kính cường lực</title>
-  <meta name="description" content="Castillo - bộ sưu tập kính cường lực." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#den">CASTILLO</a>
-    <nav class="nav" aria-label="Điều hướng chính">
-      <a href="#den">Kính đen</a>
-      <a href="#trang">Kính trắng</a>
-      <a href="#xam">Kính xám</a>
-      <a href="#vang">Kính vàng</a>
-    </nav>
-    <a class="quote-link" href="#lien-he">Nhận báo giá</a>
-  </header>
+  <main class="page">
+    <aside class="left-palette" aria-label="Chọn màu">
+      <button class="color-chip active" data-index="0"><span class="dot black"></span><small>Đen</small></button>
+      <button class="color-chip" data-index="1"><span class="dot white"></span><small>Trắng</small></button>
+      <button class="color-chip" data-index="2"><span class="dot gray"></span><small>Xám</small></button>
+      <button class="color-chip" data-index="3"><span class="dot gold"></span><small>Vàng</small></button>
+    </aside>
 
-  <main>
-    <section id="den" class="slide hero-black">
-      <div class="hero-copy compact-copy">
-        <p class="label">KÍNH CƯỜNG LỰC</p>
-        <h1>Đen</h1>
-        <p class="subline">Tối giản. Tinh tế.</p>
-      </div>
-      <a class="scroll-cue" href="#trang"><span>SCROLL</span></a>
-    </section>
+    <section class="screen">
+      <div class="track" id="track">
+        <article class="panel bg-black">
+          <header class="topbar">
+            <strong>CASTILLO</strong>
+            <nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav>
+            <a href="tel:0938245247">Nhận báo giá</a>
+          </header>
+          <div class="title"><p>KÍNH CƯỜNG LỰC</p><h1>Đen</h1><h2>Tối giản. Tinh tế.</h2></div>
+        </article>
 
-    <section id="trang" class="slide product-slide">
-      <div class="hero-copy">
-        <p class="label">KÍNH CƯỜNG LỰC</p>
-        <h1>Trắng</h1>
-        <p class="subline">Thanh lịch. Tinh khôi.</p>
-      </div>
-      <figure class="product-stage">
-        <div class="glass-product white"><span></span></div>
-      </figure>
-      <a class="scroll-cue" href="#xam"><span>SCROLL</span></a>
-    </section>
+        <article class="panel bg-white">
+          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Nhận báo giá</a></header>
+          <div class="title"><p>KÍNH CƯỜNG LỰC</p><h1>Trắng</h1><h2>Thanh lịch. Tinh khôi.</h2></div>
+        </article>
 
-    <section id="xam" class="slide product-slide">
-      <div class="hero-copy">
-        <p class="label">KÍNH CƯỜNG LỰC</p>
-        <h1>Xám</h1>
-        <p class="subline">Hiện đại. Sắc nét.</p>
-      </div>
-      <figure class="product-stage">
-        <div class="glass-product gray"><span></span></div>
-      </figure>
-      <a class="scroll-cue" href="#vang"><span>SCROLL</span></a>
-    </section>
+        <article class="panel bg-gray">
+          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Nhận báo giá</a></header>
+          <div class="title"><p>KÍNH CƯỜNG LỰC</p><h1>Xám</h1><h2>Hiện đại. Sắc nét.</h2></div>
+        </article>
 
-    <section id="vang" class="slide product-slide">
-      <div class="hero-copy">
-        <p class="label">KÍNH CƯỜNG LỰC</p>
-        <h1>Vàng</h1>
-        <p class="subline">Sang trọng. Ấm áp.</p>
-      </div>
-      <figure class="product-stage">
-        <div class="glass-product gold"><span></span></div>
-      </figure>
-      <a class="scroll-cue" href="#lien-he"><span>SCROLL</span></a>
-    </section>
-
-    <section id="lien-he" class="slide contact-slide">
-      <div class="hero-copy wide">
-        <p class="label">QUOTE</p>
-        <h2>Nhận báo giá.</h2>
-        <p class="phone">0938 245 247</p>
-        <p class="address">Số 24, Đường số 27, Tân Phong, Quận 7, TP.HCM</p>
+        <article class="panel bg-gold">
+          <header class="topbar"><strong>CASTILLO</strong><nav><button data-index="0">Kính đen</button><button data-index="1">Kính trắng</button><button data-index="2">Kính xám</button><button data-index="3">Kính vàng</button></nav><a href="tel:0938245247">Nhận báo giá</a></header>
+          <div class="title"><p>KÍNH CƯỜNG LỰC</p><h1>Vàng</h1><h2>Sang trọng. Ấm áp.</h2></div>
+        </article>
       </div>
     </section>
+
+    <aside class="right-thumbs" aria-label="Thumbnail">
+      <button class="thumb active" data-index="0"><span class="mini mini-black"></span></button>
+      <button class="thumb" data-index="1"><span class="mini mini-white"></span></button>
+      <button class="thumb" data-index="2"><span class="mini mini-gray"></span></button>
+      <button class="thumb" data-index="3"><span class="mini mini-gold"></span></button>
+    </aside>
   </main>
+
+  <script>
+    const track=document.getElementById('track');
+    const controls=document.querySelectorAll('[data-index]');
+    function go(i){track.style.transform=`translateX(-${i*100}vw)`;controls.forEach(b=>b.classList.toggle('active',Number(b.dataset.index)===i));}
+    controls.forEach(b=>b.onclick=()=>go(Number(b.dataset.index)));
+  </script>
 </body>
 </html>
