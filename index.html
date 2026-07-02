@@ -21,11 +21,7 @@
 
   <main>
     <section id="den" class="slide slide-photo">
-      <img id="cleanHero" class="hero-shot" alt="Kính cường lực đen Castillo" />
-      <div class="hero-caption">
-        <h1>KÍNH CƯỜNG LỰC</h1>
-        <p>new season 2026</p>
-      </div>
+      <img class="hero-shot" src="./2.png" alt="Kính cường lực đen Castillo" />
       <a class="scroll-cue" href="#trang"><span>SCROLL</span></a>
     </section>
 
@@ -74,14 +70,5 @@
       </div>
     </section>
   </main>
-
-  <script>
-    fetch('./assets/clean-hero.b64')
-      .then(response => response.text())
-      .then(data => {
-        const img = document.getElementById('cleanHero');
-        if (img) img.src = 'data:image/webp;base64,' + data.trim();
-      });
-  </script>
 </body>
 </html>
