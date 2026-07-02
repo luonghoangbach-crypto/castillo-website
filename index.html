@@ -16,50 +16,38 @@
       <a href="#switch">Công tắc</a>
       <a href="#socket">Ổ cắm</a>
     </nav>
-    <a class="quote-link" href="tel:0938245247">Báo giá</a>
+    <a class="quote-link" href="#">Báo giá</a>
   </header>
 
   <main class="page">
     <section id="glass" class="hero-section tone-black">
       <div class="hero-copy">
         <h1>Kính cường lực</h1>
-        <p id="glassCaption">Đen bóng. Tối giản. Sắc nét.</p>
-        <div class="hero-actions"><a class="primary" href="tel:0938245247">Chuẩn chữ nhật</a><a class="secondary" href="tel:0938245247">Chuẩn vuông</a></div>
+        <p id="glassCaption">Chuẩn chữ nhật. Đen bóng.</p>
+        <div class="hero-actions"><a id="shapeRect" class="primary" href="#glass">Chuẩn chữ nhật</a><a id="shapeSquare" class="secondary" href="#glass">Chuẩn vuông</a></div>
         <div class="color-options" aria-label="Chọn màu kính cường lực">
-          <button type="button" class="color-btn active" data-src="./assets/118G-B1.png" data-caption="Đen bóng. Tối giản. Sắc nét."><span class="dot black"></span>Đen</button>
-          <button type="button" class="color-btn" data-src="./glass-white.png" data-caption="Trắng tinh khiết. Thanh lịch."><span class="dot white"></span>Trắng</button>
-          <button type="button" class="color-btn" data-src="./glass-gray.png" data-caption="Xám hiện đại. Cân bằng."><span class="dot gray"></span>Xám</button>
-          <button type="button" class="color-btn" data-src="./glass-gold.png" data-caption="Vàng sang trọng. Ấm áp."><span class="dot gold"></span>Vàng</button>
+          <button type="button" class="color-btn active" data-color="black"><span class="dot black"></span>Đen</button>
+          <button type="button" class="color-btn" data-color="white"><span class="dot white"></span>Trắng</button>
+          <button type="button" class="color-btn" data-color="gray"><span class="dot gray"></span>Xám</button>
+          <button type="button" class="color-btn" data-color="gold"><span class="dot gold"></span>Vàng</button>
         </div>
       </div>
       <div class="product-stage"><span class="floor-shadow"></span><img id="glassProduct" class="product-img" src="./assets/118G-B1.png" alt="Kính cường lực Castillo"></div>
     </section>
 
     <section id="mask" class="hero-section tone-white">
-      <div class="hero-copy">
-        <h1>Mặt nạ kính</h1>
-        <p>Đồng bộ bề mặt. Gọn chi tiết.</p>
-        <div class="hero-actions"><a class="primary" href="tel:0938245247">Xem mẫu</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
-      </div>
-      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-white.png" alt="Mặt nạ kính Castillo"></div>
+      <div class="hero-copy"><h1>Mặt nạ kính</h1><p>Đồng bộ bề mặt. Gọn chi tiết.</p><div class="hero-actions"><a class="primary" href="#glass">Xem mẫu</a><a class="secondary" href="#glass">Tư vấn</a></div></div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./assets/118G-W2.png" alt="Mặt nạ kính Castillo"></div>
     </section>
 
     <section id="switch" class="hero-section tone-gray">
-      <div class="hero-copy">
-        <h1>Công tắc</h1>
-        <p>Phím bấm sắc nét. Hoàn thiện cao cấp.</p>
-        <div class="hero-actions"><a class="primary" href="tel:0938245247">Xem mẫu</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
-      </div>
-      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-gray.png" alt="Công tắc Castillo"></div>
+      <div class="hero-copy"><h1>Công tắc</h1><p>Phím bấm sắc nét. Hoàn thiện cao cấp.</p><div class="hero-actions"><a class="primary" href="#glass">Xem mẫu</a><a class="secondary" href="#glass">Tư vấn</a></div></div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./118G-Gr3.png" alt="Công tắc Castillo"></div>
     </section>
 
     <section id="socket" class="hero-section tone-gold">
-      <div class="hero-copy">
-        <h1>Ổ cắm</h1>
-        <p>Đồng bộ thiết kế. Dễ phối công trình.</p>
-        <div class="hero-actions"><a class="primary" href="tel:0938245247">Xem mẫu</a><a class="secondary" href="tel:0938245247">Tư vấn</a></div>
-      </div>
-      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./glass-gold.png" alt="Ổ cắm Castillo"></div>
+      <div class="hero-copy"><h1>Ổ cắm</h1><p>Đồng bộ thiết kế. Dễ phối công trình.</p><div class="hero-actions"><a class="primary" href="#glass">Xem mẫu</a><a class="secondary" href="#glass">Tư vấn</a></div></div>
+      <div class="product-stage"><span class="floor-shadow"></span><img class="product-img" src="./assets/118G-G4.png" alt="Ổ cắm Castillo"></div>
     </section>
   </main>
 
@@ -67,15 +55,27 @@
     const glassProduct = document.getElementById('glassProduct');
     const glassCaption = document.getElementById('glassCaption');
     const colorButtons = document.querySelectorAll('.color-btn');
-
-    colorButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        glassProduct.src = button.dataset.src;
-        glassCaption.textContent = button.dataset.caption;
-        colorButtons.forEach(item => item.classList.remove('active'));
-        button.classList.add('active');
-      });
-    });
+    const shapeRect = document.getElementById('shapeRect');
+    const shapeSquare = document.getElementById('shapeSquare');
+    const imageSets = {
+      rect: {black:'./assets/118G-B1.png', white:'./assets/118G-W2.png', gray:'./118G-Gr3.png', gold:'./assets/118G-G4.png'},
+      square: {black:'./assets/86G-B5.png', white:'./assets/86G-W6.png', gray:'./assets/86G-Gr7.png', gold:'./86G-G8.png'}
+    };
+    const colorNames = {black:'Đen bóng', white:'Trắng tinh khiết', gray:'Xám hiện đại', gold:'Vàng sang trọng'};
+    let currentShape = 'rect';
+    let currentColor = 'black';
+    function renderGlass(){
+      glassProduct.src = imageSets[currentShape][currentColor];
+      glassCaption.textContent = (currentShape === 'rect' ? 'Chuẩn chữ nhật. ' : 'Chuẩn vuông. ') + colorNames[currentColor] + '.';
+      shapeRect.classList.toggle('primary', currentShape === 'rect');
+      shapeRect.classList.toggle('secondary', currentShape !== 'rect');
+      shapeSquare.classList.toggle('primary', currentShape === 'square');
+      shapeSquare.classList.toggle('secondary', currentShape !== 'square');
+      colorButtons.forEach(item => item.classList.toggle('active', item.dataset.color === currentColor));
+    }
+    colorButtons.forEach(button => button.addEventListener('click', () => {currentColor = button.dataset.color; renderGlass();}));
+    shapeRect.addEventListener('click', event => {event.preventDefault(); currentShape = 'rect'; currentColor = 'black'; renderGlass();});
+    shapeSquare.addEventListener('click', event => {event.preventDefault(); currentShape = 'square'; currentColor = 'black'; renderGlass();});
   </script>
 </body>
 </html>
