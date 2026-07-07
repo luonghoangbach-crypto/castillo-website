@@ -10,7 +10,9 @@
 .standard-copy h2{margin:0;font-size:clamp(24px,2.2vw,34px);line-height:1.06;letter-spacing:-.04em;font-weight:700}
 .standard-copy p{margin:8px 0 0;font-size:clamp(17px,1.35vw,22px);line-height:1.16;letter-spacing:-.02em}
 .standard-card .color-options{margin-top:14px}
-.standard-card .product-stage{width:100%;height:clamp(230px,25vw,340px);margin-top:clamp(20px,3vh,34px);margin-bottom:0}
-#glass-square .product-img{max-width:min(72%,320px)}
-@media(max-width:1100px){.hero-section{min-height:clamp(650px,calc(100vh - 44px),780px);padding-bottom:clamp(56px,7vh,84px)}.product-stage{margin-bottom:clamp(36px,5vh,64px)}.standard-grid{grid-template-columns:1fr;max-width:760px}.standard-card .product-stage{height:clamp(260px,42vw,380px)}}
-@media(max-width:620px){.hero-section{min-height:clamp(590px,calc(100vh - 44px),720px);padding-bottom:52px}.product-stage{margin-bottom:42px}.compare-section{padding-bottom:44px}.standard-card{padding:0}.standard-card .product-stage{height:clamp(220px,48vw,300px)}#glass-square .product-img{max-width:min(74%,260px)}}
+.standard-card .product-stage{height:auto;margin-top:clamp(20px,3vh,34px);margin-bottom:0}
+#glass-rect .standard-stage{width:min(100%,590px);aspect-ratio:118/72}
+#glass-square .standard-stage{width:min(72.88%,430px);aspect-ratio:86/86;margin-left:auto;margin-right:auto}
+.standard-card .product-img{width:100%;height:100%;object-fit:contain}
+@media(max-width:1100px){.hero-section{min-height:clamp(650px,calc(100vh - 44px),780px);padding-bottom:clamp(56px,7vh,84px)}.product-stage{margin-bottom:clamp(36px,5vh,64px)}.standard-grid{grid-template-columns:1fr;max-width:760px}#glass-rect .standard-stage{width:min(100%,620px)}#glass-square .standard-stage{width:min(72.88%,452px)}}
+@media(max-width:620px){.hero-section{min-height:clamp(590px,calc(100vh - 44px),720px);padding-bottom:52px}.product-stage{margin-bottom:42px}.compare-section{padding-bottom:44px}.standard-card{padding:0}#glass-rect .standard-stage{width:100%}#glass-square .standard-stage{width:72.88%}}
