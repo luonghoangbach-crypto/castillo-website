@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Castillo - Kính cường lực</title>
   <link rel="stylesheet" href="./styles.css?v=3" />
-  <link rel="stylesheet" href="./v4.css?v=29" />
+  <link rel="stylesheet" href="./v4.css?v=30" />
 </head>
 <body>
   <header class="topbar">
@@ -77,9 +77,9 @@
   </main>
 
   <script>
+    const glassSection = document.getElementById('glass');
     const glassProduct = document.getElementById('glassProduct');
     const glassCaption = document.getElementById('glassCaption');
-    const wallPreview = document.getElementById('wallPreview');
     const wallNote = document.getElementById('wallNote');
     let currentStandard = 'rect';
     let currentColor = 'black';
@@ -152,7 +152,7 @@
     document.querySelectorAll('.wall-btn').forEach(button => {
       button.addEventListener('click', () => {
         const wall = wallData[button.dataset.wall];
-        wallPreview.style.setProperty('--wall-bg', wall.bg);
+        glassSection.style.setProperty('--wall-bg', wall.bg);
         wallNote.textContent = wall.note;
         document.querySelectorAll('.wall-btn').forEach(item => item.classList.remove('active'));
         button.classList.add('active');
