@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Castillo - Kính cường lực</title>
   <link rel="stylesheet" href="./styles.css?v=3" />
-  <link rel="stylesheet" href="./v4.css?v=28" />
+  <link rel="stylesheet" href="./v4.css?v=29" />
 </head>
 <body>
   <header class="topbar">
@@ -34,8 +34,18 @@
           <button type="button" class="color-btn glass-color" data-color="gray"><span class="dot gray"></span>Xám</button>
           <button type="button" class="color-btn glass-color" data-color="gold"><span class="dot gold"></span>Vàng</button>
         </div>
+        <div class="wall-options" aria-label="Chọn loại tường nền">
+          <span>Tường nền</span>
+          <button type="button" class="wall-btn active" data-wall="white"><i class="wall-swatch wall-white"></i>Trắng sứ</button>
+          <button type="button" class="wall-btn" data-wall="cream"><i class="wall-swatch wall-cream"></i>Kem ấm</button>
+          <button type="button" class="wall-btn" data-wall="gray"><i class="wall-swatch wall-gray"></i>Xám bê tông</button>
+          <button type="button" class="wall-btn" data-wall="wood"><i class="wall-swatch wall-wood"></i>Vân gỗ</button>
+          <button type="button" class="wall-btn" data-wall="marble"><i class="wall-swatch wall-marble"></i>Đá marble</button>
+          <button type="button" class="wall-btn" data-wall="dark"><i class="wall-swatch wall-dark"></i>Sơn tối</button>
+        </div>
+        <p id="wallNote" class="wall-note">Trắng sứ: dễ phối nhất, hợp hầu hết màu kính Castillo.</p>
       </div>
-      <div class="product-stage"><span class="floor-shadow"></span><img id="glassProduct" class="product-img" src="./assets/118G-B1.png" alt="Kính cường lực Castillo"></div>
+      <div id="wallPreview" class="product-stage"><span class="floor-shadow"></span><img id="glassProduct" class="product-img" src="./assets/118G-B1.png" alt="Kính cường lực Castillo"></div>
     </section>
 
     <section id="mask" class="hero-section tone-white">
@@ -69,6 +79,8 @@
   <script>
     const glassProduct = document.getElementById('glassProduct');
     const glassCaption = document.getElementById('glassCaption');
+    const wallPreview = document.getElementById('wallPreview');
+    const wallNote = document.getElementById('wallNote');
     let currentStandard = 'rect';
     let currentColor = 'black';
     const productData = {
@@ -83,6 +95,32 @@
         white: { src: './assets/86G-W6.png', caption: 'Trắng sứ. Thanh lịch. Tinh tế.' },
         gray: { src: './assets/86G-Gr7.png', caption: 'Xám khói. Hiện đại. Lịch lãm.' },
         gold: { src: './86G-G8.png', caption: 'Vàng champagne. Ấm áp. Quý phái.' }
+      }
+    };
+    const wallData = {
+      white: {
+        bg: 'linear-gradient(135deg,#fbfaf6 0%,#efebe2 100%)',
+        note: 'Trắng sứ: dễ phối nhất, hợp hầu hết màu kính Castillo.'
+      },
+      cream: {
+        bg: 'linear-gradient(135deg,#f1dfc3 0%,#d6b98b 100%)',
+        note: 'Kem ấm: hợp nhà ấm, nội thất gỗ, nên ưu tiên kính đen hoặc vàng champagne.'
+      },
+      gray: {
+        bg: 'linear-gradient(135deg,#d2d3ce 0%,#9ea19b 100%)',
+        note: 'Xám bê tông: hợp phong cách hiện đại, phối đẹp với kính đen, trắng hoặc xám.'
+      },
+      wood: {
+        bg: 'repeating-linear-gradient(90deg,rgba(93,57,30,.12) 0 11px,rgba(255,255,255,.08) 11px 22px),linear-gradient(135deg,#c7965a 0%,#8d5f36 100%)',
+        note: 'Vân gỗ: hợp nội thất gỗ, khách sạn, villa; đen và vàng champagne nổi bật nhất.'
+      },
+      marble: {
+        bg: 'radial-gradient(circle at 25% 20%,rgba(255,255,255,.9),rgba(255,255,255,0) 24%),linear-gradient(135deg,#f7f7f2 0%,#d5d8d2 100%)',
+        note: 'Đá marble: hợp nhà cao cấp, nên dùng kính đen, trắng hoặc vàng champagne.'
+      },
+      dark: {
+        bg: 'linear-gradient(135deg,#4b4c4a 0%,#1f2022 100%)',
+        note: 'Sơn tối: hợp không gian cá tính; kính trắng hoặc vàng champagne dễ nổi hơn.'
       }
     };
     function renderProduct() {
@@ -109,6 +147,15 @@
         document.querySelectorAll('.glass-color').forEach(item => item.classList.remove('active'));
         button.classList.add('active');
         renderProduct();
+      });
+    });
+    document.querySelectorAll('.wall-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const wall = wallData[button.dataset.wall];
+        wallPreview.style.setProperty('--wall-bg', wall.bg);
+        wallNote.textContent = wall.note;
+        document.querySelectorAll('.wall-btn').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
       });
     });
   </script>
