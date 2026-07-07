@@ -1,3 +1,7 @@
 /* final overrides */
 .product-stage:before,.product-stage:after,.floor-shadow{display:none}
 .product-img{filter:none;mix-blend-mode:normal}
+.hero-section{height:auto;min-height:clamp(720px,calc(100vh - 44px),860px);padding-bottom:clamp(70px,8vh,110px)}
+.product-stage{margin-bottom:clamp(44px,6vh,80px)}
+@media(max-width:1100px){.hero-section{min-height:clamp(650px,calc(100vh - 44px),780px);padding-bottom:clamp(56px,7vh,84px)}.product-stage{margin-bottom:clamp(36px,5vh,64px)}}
+@media(max-width:620px){.hero-section{min-height:clamp(590px,calc(100vh - 44px),720px);padding-bottom:52px}.product-stage{margin-bottom:42px}}
