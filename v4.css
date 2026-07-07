@@ -3,5 +3,14 @@
 .product-img{filter:none;mix-blend-mode:normal}
 .hero-section{height:auto;min-height:clamp(720px,calc(100vh - 44px),860px);padding-bottom:clamp(70px,8vh,110px)}
 .product-stage{margin-bottom:clamp(44px,6vh,80px)}
-@media(max-width:1100px){.hero-section{min-height:clamp(650px,calc(100vh - 44px),780px);padding-bottom:clamp(56px,7vh,84px)}.product-stage{margin-bottom:clamp(36px,5vh,64px)}}
-@media(max-width:620px){.hero-section{min-height:clamp(590px,calc(100vh - 44px),720px);padding-bottom:52px}.product-stage{margin-bottom:42px}}
+.compare-section{min-height:auto;padding-bottom:clamp(58px,7vh,88px)}
+.compare-section .hero-copy{margin-top:clamp(46px,6vh,62px)}
+.standard-grid{width:min(94vw,1320px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);align-items:start;margin-top:clamp(30px,4vh,48px)}
+.standard-card{border-radius:34px;background:rgba(255,255,255,.34);border:1px solid rgba(0,0,0,.06);padding:clamp(18px,2.2vw,28px);text-align:center;backdrop-filter:blur(18px)}
+.standard-copy h2{margin:0;font-size:clamp(24px,2.2vw,34px);line-height:1.06;letter-spacing:-.04em;font-weight:700}
+.standard-copy p{margin:8px 0 0;font-size:clamp(17px,1.35vw,22px);line-height:1.16;letter-spacing:-.02em}
+.standard-card .color-options{margin-top:14px}
+.standard-card .product-stage{width:100%;height:clamp(230px,25vw,340px);margin-top:clamp(20px,3vh,34px);margin-bottom:0}
+#glass-square .product-img{max-width:min(72%,320px)}
+@media(max-width:1100px){.hero-section{min-height:clamp(650px,calc(100vh - 44px),780px);padding-bottom:clamp(56px,7vh,84px)}.product-stage{margin-bottom:clamp(36px,5vh,64px)}.standard-grid{grid-template-columns:1fr;max-width:760px}.standard-card .product-stage{height:clamp(260px,42vw,380px)}}
+@media(max-width:620px){.hero-section{min-height:clamp(590px,calc(100vh - 44px),720px);padding-bottom:52px}.product-stage{margin-bottom:42px}.compare-section{padding-bottom:44px}.standard-card{border-radius:24px;padding:16px}.standard-card .product-stage{height:clamp(220px,48vw,300px)}#glass-square .product-img{max-width:min(74%,260px)}}
